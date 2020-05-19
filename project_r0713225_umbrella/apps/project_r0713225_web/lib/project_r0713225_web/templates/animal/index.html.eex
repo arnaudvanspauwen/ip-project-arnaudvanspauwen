@@ -1,0 +1,26 @@
+<h1 id = "tijd" style= "text-align:center"></h1>
+<section class="phx-hero">
+  <p><%= gettext "Welcome" %> <%= Guardian.Plug.current_resource(@conn).username%></p>
+<%= if assigns[:animals] do%>
+<table>
+  <thead>
+    <tr>
+      <th><%= gettext "Name" %></th>
+      <th><%= gettext "Date of birth" %></th>
+      <th><%= gettext "cat or dog" %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for animal <- @animals do %>
+    <tr>
+      <td><%= animal.name %></td>
+      <td><%= animal.dob %></td>
+      <td><%= animal.cat_or_dog %></td>      
+    </tr>
+<% end %>
+  </tbody>
+</table>
+<%end%>
+</section>
+<script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/klok.js") %>">"</script>

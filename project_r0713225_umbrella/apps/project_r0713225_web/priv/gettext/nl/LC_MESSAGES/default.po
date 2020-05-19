@@ -1,0 +1,174 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: nl\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/changeusername.html.eex:20
+#: lib/project_r0713225_web/templates/profile/resetpassword.html.eex:28
+msgid "Back"
+msgstr "Terug"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/changeusername.html.eex:2
+msgid "Change username"
+msgstr "Verander username"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/resetpassword.html.eex:19
+#: lib/project_r0713225_web/templates/session/newaccount.html.eex:18 lib/project_r0713225_web/templates/user/form.html.eex:16
+msgid "Confirm password"
+msgstr "passwoord inorde"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/animal/index.html.eex:9
+msgid "Date of birth"
+msgstr "Geboorte datum"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/session/newaccount.html.eex:26
+msgid "I have already an account"
+msgstr "Ik heb al een account"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/animal/index.html.eex:8
+#: lib/project_r0713225_web/templates/profile/profile.html.eex:15 lib/project_r0713225_web/templates/profile/profile.html.eex:27
+msgid "Name"
+msgstr "Naam"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/resetpassword.html.eex:11
+msgid "Old password"
+msgstr "Oud paswoord"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/changeusername.html.eex:7
+#: lib/project_r0713225_web/templates/session/newaccount.html.eex:6
+msgid "Oops, something went wrong! Please check the errors below"
+msgstr "oeps, er liep iets fout"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/resetpassword.html.eex:15
+#: lib/project_r0713225_web/templates/session/login.html.eex:12 lib/project_r0713225_web/templates/session/newaccount.html.eex:14
+msgid "Password"
+msgstr "Wachtwoord"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/resetpassword.html.eex:2
+msgid "Reset password"
+msgstr "Reset wachtwoord"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/profile.html.eex:1
+#: lib/project_r0713225_web/templates/user/show.html.eex:1
+msgid "Show User"
+msgstr "Toon gebruiker"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/session/login.html.eex:1
+#: lib/project_r0713225_web/templates/session/newaccount.html.eex:1
+msgid "Sign in"
+msgstr "Log in"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/changeusername.html.eex:16
+#: lib/project_r0713225_web/templates/profile/resetpassword.html.eex:24 lib/project_r0713225_web/templates/session/login.html.eex:18
+#: lib/project_r0713225_web/templates/session/newaccount.html.eex:23
+msgid "Submit"
+msgstr "Verzend"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/changeusername.html.eex:11
+#: lib/project_r0713225_web/templates/profile/profile.html.eex:4 lib/project_r0713225_web/templates/session/login.html.eex:6
+#: lib/project_r0713225_web/templates/session/newaccount.html.eex:10
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/animal/index.html.eex:3
+#: lib/project_r0713225_web/templates/page/index.html.eex:3
+msgid "Welcome"
+msgstr "Welkom"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/animal/index.html.eex:10
+msgid "cat or dog"
+msgstr "kat of hond"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/session/login.html.eex:22
+msgid "create account"
+msgstr "Maak een account"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:20
+msgid "Login"
+msgstr "Log in"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:21
+msgid "Logout"
+msgstr "Log uit"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:19
+msgid "My profile"
+msgstr "Mijn profiel"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/profile.html.eex:11
+msgid "change password"
+msgstr "verander paswoord"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/profile.html.eex:9
+msgid "change username"
+msgstr "Verander username"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:31
+msgid "choose language:"
+msgstr "kies taal"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:17
+msgid "is now logged in."
+msgstr "is nu ingelogd"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/profile/profile.html.eex:21
+msgid "Generate"
+msgstr "Genereer"
+
+#, elixir-format
+#: lib/project_r0713225_web/controllers/profile_controller.ex:50
+msgid "Password changed successfully."
+msgstr "Paswoord is veranderd"
+
+#, elixir-format
+#: lib/project_r0713225_web/controllers/profile_controller.ex:29
+msgid "Username changed successfully."
+msgstr "gebruikersnaam is veranderd"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:30
+msgid "Project of Arnaud Vanspauwen"
+msgstr "Project van Arnaud Vanspauwen"
+
+#, elixir-format
+#: lib/project_r0713225_web/templates/layout/app.html.eex:23
+msgid "User Management"
+msgstr "Gebruikers beheer"
+
+#, elixir-format
+#: lib/project_r0713225_web/plugs/Apikey_plug.ex:25
+msgid "Unauthorized access"
+msgstr "Geen toegang"

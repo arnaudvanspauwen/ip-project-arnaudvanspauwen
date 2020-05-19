@@ -1,0 +1,43 @@
+<h1><%= gettext "Show User" %></h1>
+<ul>
+   <li>
+    <strong> <%= gettext "Username" %> </strong>
+    <%= @user.username %>
+  </li>
+</ul>
+ 
+<a href="/changeusername"> <%= gettext "change username" %> </a>
+
+<a href="/resetpassword"> <%= gettext "change password" %> </a>
+
+<%= form_for @changeset, Routes.profile_path(@conn, :create_api_key), fn f -> %>
+<div class="form-group">
+    <%= label f, gettext("Name") %>
+    <%= text_input f, :name, class: "form-control"%>
+    <%= error_tag f, :name %>
+</div>
+
+<div class="form-group">
+    <%= submit gettext("Generate"), class: "btn btn-primary" %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th> <%= gettext "Name" %> </th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= for api_key <- @apikeys do %>
+    <tr>
+      <td><%= api_key.name %></td>
+      <td><%= link"Show", to: Routes.profile_path(@conn, :showkey, api_key), method: :get%></td>
+      <td><%= link"Delete", to: Routes.profile_path(@conn, :deletekey, api_key), method: :delete, data: [confirm: "Are you sure?"] %></td>   
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+       <!--- <td><%= link"HARD CODED Delete", to: Routes.profile_path(@conn, :deletekey, 3), method: :delete, data: [confirm: "Are you sure?"] %></td> --->
+<% end %>

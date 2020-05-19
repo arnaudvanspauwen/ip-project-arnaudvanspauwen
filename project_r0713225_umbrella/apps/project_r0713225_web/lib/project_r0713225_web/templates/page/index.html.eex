@@ -1,0 +1,24 @@
+<section class="phx-hero">
+  <%=if Guardian.Plug.current_resource(@conn) do%>
+  <p><%= gettext "Welcome" %> <%= Guardian.Plug.current_resource(@conn).username%></p> 
+  <%end%>
+  <p id = "tijd">00</p>
+</section>
+<script>
+ 
+function formatNumber(number) {
+    return number < 10 ? "0" + number : number;
+}
+ 
+function setTimer()
+{
+    let tijd = new Date();
+    document.getElementById("tijd").innerText = '';
+    document.getElementById("tijd").innerText += formatNumber(tijd.getHours()) + ':';
+    document.getElementById("tijd").innerText += formatNumber(tijd.getMinutes()) + ' ';
+    setTimeout(setTimer,1000);
+}
+    setTimer();
+</script>
+
+dikkelul
