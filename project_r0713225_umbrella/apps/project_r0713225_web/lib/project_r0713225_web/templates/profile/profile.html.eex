@@ -17,6 +17,14 @@
     <%= error_tag f, :name %>
 </div>
 
+<%=label f, :readable, "does this key have read permissions?"%>
+<%=checkbox f, :readable%>
+<%=error_tag f, :readable%>
+
+<%=label f, :writeable, "does this key have write permissions?"%>
+<%=checkbox f, :writeable%>
+<%=error_tag f, :writeable%>
+
 <div class="form-group">
     <%= submit gettext("Generate"), class: "btn btn-primary" %>
 </div>
