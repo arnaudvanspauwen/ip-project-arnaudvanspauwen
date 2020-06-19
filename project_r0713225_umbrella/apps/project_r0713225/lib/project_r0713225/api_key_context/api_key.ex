@@ -7,6 +7,8 @@ defmodule ProjectR0713225.ApiKeyContext.ApiKey do
   schema "apikeys" do
     field :key, :string
     field :name, :string
+    field :writeable, :boolean, default: false
+    field :readable, :boolean, default: false
     belongs_to :user, User
 
     timestamps()
@@ -15,17 +17,18 @@ defmodule ProjectR0713225.ApiKeyContext.ApiKey do
   @doc false
   def changeset(api_key, attrs) do
     api_key
-    |> cast(attrs, [:key, :name])
-    |> validate_required([:key, :name])
+    |> cast(attrs, [:key, :name, :writeable])
+    |> validate_required([:key, :name, :writeable])
   end
   
+
   def create_changeset(api_key, attrs, user) do
     api_key
-    |> cast(attrs, [:name])
-    |> validate_required([:name])
+    |> cast(attrs, [:name, :writeable, :readable])
+    |> validate_required([:name, :writeable, :readable])
     |> put_assoc(:user, user)
     |> addkey()
-  end 
+  end
 
   ### geschreven methodes ###
 

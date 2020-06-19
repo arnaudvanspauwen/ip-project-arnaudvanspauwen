@@ -26,6 +26,12 @@ defmodule ProjectR0713225.ApiKeyContext do
     Repo.all(ApiKey)
   end
 
+
+  def key_acces_to_write?(key)do
+    Repo.exists?
+    (from n in ApiKey, where: ^key == n.key and n.writeable == true)
+  end
+
   @doc """
   Gets a single api_key.
 
@@ -62,7 +68,6 @@ defmodule ProjectR0713225.ApiKeyContext do
 
   @doc """
   Updates a api_key.
-
   ## Examples
 
       iex> update_api_key(api_key, %{field: new_value})

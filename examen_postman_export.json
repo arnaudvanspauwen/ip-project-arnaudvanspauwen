@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "8fd26431-2420-414b-933a-ea1425afec62",
+		"name": "tests animals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get your animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/users/1/cats",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"1",
+						"cats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create animal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cat[name]",
+							"value": "snuffles",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/api/users/1/cats",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"1",
+						"cats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update animal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "myfancyheader",
+						"value": "uTTfcHyOvgXlekxbIpRtL2BllY2XNA/w21O2sHdzDysEzqMDafcRmnOzz/UaODY5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "animal[name]",
+							"value": "SnuffelySnuf",
+							"type": "text"
+						},
+						{
+							"key": "animal[dob]",
+							"value": "2015-09-09",
+							"type": "text"
+						},
+						{
+							"key": "animal[cat_or_dog]",
+							"value": "kat",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/api/users/1/animals/1",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"1",
+						"animals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete animal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/users/1/cats/3",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"1",
+						"cats",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getanimal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "caf3686b-36b3-4a11-8f1c-187bd6b63ad4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8a66872d-42e4-4b49-b175-7dba2e2c150b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
