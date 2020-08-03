@@ -17,13 +17,12 @@
     <%= error_tag f, :name %>
 </div>
 
-<%=label f, :readable, "does this key have read permissions?"%>
-<%=checkbox f, :readable%>
-<%=error_tag f, :readable%>
+<%= error_tag f, :name %>
+<%= error_tag f, :name %>
 
-<%=label f, :writeable, "does this key have write permissions?"%>
-<%=checkbox f, :writeable%>
-<%=error_tag f, :writeable%>
+<%=label f, :isWriteable,"Does this key have write permissions?"%>
+<%=checkbox f, :isWriteable%>
+<%= error_tag f, :isWriteable %>
 
 <div class="form-group">
     <%= submit gettext("Generate"), class: "btn btn-primary" %>
@@ -33,7 +32,7 @@
   <thead>
     <tr>
       <th> <%= gettext "Name" %> </th>
-      <th></th>
+      <th>is writeable key</th>
       <th></th>
     </tr>
   </thead>
@@ -41,6 +40,7 @@
   <%= for api_key <- @apikeys do %>
     <tr>
       <td><%= api_key.name %></td>
+      <td><%= api_key.isWriteable %></td>
       <td><%= link"Show", to: Routes.profile_path(@conn, :showkey, api_key), method: :get%></td>
       <td><%= link"Delete", to: Routes.profile_path(@conn, :deletekey, api_key), method: :delete, data: [confirm: "Are you sure?"] %></td>   
     </tr>

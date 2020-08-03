@@ -27,11 +27,6 @@ defmodule ProjectR0713225.ApiKeyContext do
   end
 
 
-  def key_acces_to_write?(key)do
-    Repo.exists?
-    (from n in ApiKey, where: ^key == n.key and n.writeable == true)
-  end
-
   @doc """
   Gets a single api_key.
 
@@ -119,6 +114,10 @@ defmodule ProjectR0713225.ApiKeyContext do
 
   def key_correct?(user_id, key) do
       Repo.exists?(from k in ApiKey, where: k.key == ^key and k.user_id == ^user_id)
+  end
+
+  def apiKey_canWrite?(user_id,key) do
+    Repo.exists?(from k in ApiKey, where: k.key == ^key and k.user_id == ^user_id and k.isWriteable == true)
   end
 
   def check_if_key_is_from_user!(id, user) do

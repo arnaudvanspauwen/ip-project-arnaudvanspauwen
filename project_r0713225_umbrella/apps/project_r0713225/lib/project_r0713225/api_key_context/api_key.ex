@@ -7,8 +7,7 @@ defmodule ProjectR0713225.ApiKeyContext.ApiKey do
   schema "apikeys" do
     field :key, :string
     field :name, :string
-    field :writeable, :boolean, default: false
-    field :readable, :boolean, default: false
+    field :isWriteable, :boolean
     belongs_to :user, User
 
     timestamps()
@@ -17,15 +16,15 @@ defmodule ProjectR0713225.ApiKeyContext.ApiKey do
   @doc false
   def changeset(api_key, attrs) do
     api_key
-    |> cast(attrs, [:key, :name, :writeable])
-    |> validate_required([:key, :name, :writeable])
+    |> cast(attrs, [:key, :name, :isWriteable])
+    |> validate_required([:key, :name, :isWriteable])
   end
   
 
   def create_changeset(api_key, attrs, user) do
     api_key
-    |> cast(attrs, [:name, :writeable, :readable])
-    |> validate_required([:name, :writeable, :readable])
+    |> cast(attrs, [:name, :isWriteable])
+    |> validate_required([:name, :isWriteable])
     |> put_assoc(:user, user)
     |> addkey()
   end
@@ -40,7 +39,7 @@ defmodule ProjectR0713225.ApiKeyContext.ApiKey do
 
   defp addkey(changeset) do
     case changeset do
-      %Ecto.Changeset{valid?: true, changes: %{name: name}} ->
+      %Ecto.Changeset{valid?: true, changes: %{name: name, isWriteable: isWriteable}} ->
         put_change(changeset, :key, generate())
           _->
           changeset
